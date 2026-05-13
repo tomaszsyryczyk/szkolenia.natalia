@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python -c \"import pdfplumber; pdf = pdfplumber.open\\('E:/szkolenia.natalia/lab05/cwiczenia.pdf'\\); [print\\(f'--- Strona {i+1} ---\\\\n{p.extract_text\\(\\)}'\\) for i, p in enumerate\\(pdf.pages\\)]; pdf.close\\(\\)\" 2>&1)",
+      "PowerShell(python -c \"import PyPDF2; r=PyPDF2.PdfReader\\('E:/szkolenia.natalia/lab05/cwiczenia.pdf'\\); [print\\(f'--- Strona {i+1} ---\\\\n{r.pages[i].extract_text\\(\\)}'\\) for i in range\\(len\\(r.pages\\)\\)]\" 2>&1)",
+      "PowerShell(pip install *)",
+      "Bash(rtk pip *)",
+      "Bash(python *)",
+      "Bash(Out-File E:/szkolenia.natalia/lab06/_debug.txt -Encoding utf8)",
+      "Bash(Get-Content E:/szkolenia.natalia/lab06/_debug.txt)",
+      "PowerShell(python E:/szkolenia.natalia/lab06/_fix.py)",
+      "PowerShell(python E:/szkolenia.natalia/lab06/_write_nb.py 2>&1)",
+      "PowerShell(python -c \"import json; json.load\\(open\\('E:/szkolenia.natalia/lab06/zadanieIV_funkcja_Fn.ipynb', encoding='utf-8'\\)\\); print\\('OK'\\)\")"
+    ]
+  }
+}
